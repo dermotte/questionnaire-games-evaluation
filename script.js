@@ -1,17 +1,17 @@
 // HEXAD-12 Questions
 const questions = [
-    { type: "Philanthropist", text: "It makes me happy if I am able to help others." },
-    { type: "Philanthropist", text: "The well-being of others is important to me." },
-    { type: "Socializer", text: "I like being part of a team." },
-    { type: "Socializer", text: "I enjoy group activities." },
-    { type: "Achiever", text: "I like mastering difficult tasks." },
-    { type: "Achiever", text: "I enjoy emerging victorious out of difficult circumstances." },
-    { type: "Player", text: "If the reward is sufficient, I will put in the effort." },
-    { type: "Player", text: "Rewards are a great way to motivate me." },
-    { type: "FreeSpirit", text: "It is important to me to follow my own path." },
-    { type: "FreeSpirit", text: "Being independent is important to me." },
-    { type: "Disruptor", text: "I see myself as a rebel." },
-    { type: "Disruptor", text: "I dislike following rules." }
+    { type: "Philanthropist", text: "It makes me happy if I am able to help others.", val: -1 },
+    { type: "Philanthropist", text: "The well-being of others is important to me.", val: -1 },
+    { type: "Socializer", text: "I like being part of a team.", val: -1 },
+    { type: "Socializer", text: "I enjoy group activities.", val: -1 },
+    { type: "Achiever", text: "I like mastering difficult tasks.", val: -1 },
+    { type: "Achiever", text: "I enjoy emerging victorious out of difficult circumstances.", val: -1 },
+    { type: "Player", text: "If the reward is sufficient, I will put in the effort.", val: -1 },
+    { type: "Player", text: "Rewards are a great way to motivate me.", val: -1 },
+    { type: "FreeSpirit", text: "It is important to me to follow my own path.", val: -1 },
+    { type: "FreeSpirit", text: "Being independent is important to me.", val: -1 },
+    { type: "Disruptor", text: "I see myself as a rebel.", val: -1 },
+    { type: "Disruptor", text: "I dislike following rules.", val: -1 }
 ];
 
 // HEXAD User Type Explanations
@@ -97,6 +97,7 @@ document.getElementById('submit-btn').addEventListener('click', () => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         if (selected) {
             const value = parseInt(selected.value, 10);
+            question.val = value;
             scores[question.type] += value;
         } else {
             allAnswered = false;
@@ -111,7 +112,7 @@ document.getElementById('submit-btn').addEventListener('click', () => {
     }
 
     // Display scores for each user type
-    document.getElementById('result').textContent = JSON.stringify(scores, null, 2);
+    document.getElementById('result').textContent = JSON.stringify(scores, null, 2) + JSON.stringify(questions, null, 2);
 
     // Display user type explanations
     const explanationContainer = document.getElementById('user-types-explanation');
