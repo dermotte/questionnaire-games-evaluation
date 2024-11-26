@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini PXI Survey</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">mini PXI Survey</h1>
+        <div id="questions-container" class="mb-4"></div>
+        <div class="text-center">
+            <button id="submit-btn" class="btn btn-primary">Submit</button>
+        </div>
+        <div id="alert-container" class="mt-4"></div>
+        <div class="mt-4">
+            <pre id="result" class="p-3 bg-light border rounded"></pre>
+            <div class="text-end">
+                <button id="copy-btn" class="btn btn-secondary" style="display: none;">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
