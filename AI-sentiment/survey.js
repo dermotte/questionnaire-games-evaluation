@@ -5,17 +5,17 @@ const surveyQuestions = {
     singleChoice: [
         {
             id: 'ai_usage',
-            question: 'Did you ever use AI in one of your game projects?',
+            question: 'Did you ever use generative AI in one of your game projects?',
             options: ['Yes', 'No']
         },
         {
             id: 'ai_feelings',
-            question: 'What best describes your current feelings on AI?',
+            question: 'What best describes your current feelings on generative AI?',
             options: [
                 'I haven’t thought much about it',
-                'I am completely against anyone using AI in video games',
-                'I am completely OK with anyone using AI in video games',
-                'I have mixed feelings/comments about AI'
+                'I am completely against anyone using generative AI in video games',
+                'I am completely OK with anyone using generative AI in video games',
+                'I have mixed feelings/comments about generative AI'
             ]
         }
     ],
@@ -32,6 +32,7 @@ const surveyQuestions = {
         }
     ],
     likertScale: [
+        /*
         'Using AI-generated art for prototyping.',
         'Using AI-generated art in commercial video games.',
         'Using AI-generated art in non-commercial video games.',
@@ -42,10 +43,22 @@ const surveyQuestions = {
         'Using AI-generated writing for static dialogue in a video game.',
         'Using AI-generated writing as a baseline or inspiration for writing dialogue.',
         'Using AI-generated writing for dynamic dialogue generation in a video game (e.g., depending on user input).',
-        'I care about the energy consumption of AI when training the models.',
-        'I care about the energy consumption of AI when using the models live.',
-        'I care about the size of the AI model (i.e., parameters).',
-        'I care whether the AI model runs locally on my machine or in the cloud.'
+        */
+       // Mathias 
+        "Generative AI has the potential to significantly improve the video game development process.",
+        "The use of generative AI in video game development is ultimately beneficial for players.",
+        "I am comfortable with the idea of generative AI playing a role in creating video games.",
+        "Using AI-generated music can enhance the atmosphere and immersion of a video game.",
+        "Generative AI can help create more diverse and interesting characters in video games.",
+        "Generative AI is a valuable tool for streamlining repetitive tasks during game development.",
+        "Overreliance on generative AI in video game development could lead to a lack of creativity.",
+        "Using AI-generated content raises ethical concerns about authorship and originality.",
+        "It's important to ensure that generative AI tools are used responsibly and transparently in game development.",
+        // original
+        'I care about the energy consumption of generative AI when training the models.',
+        'I care about the energy consumption of generative AI when using the models live.',
+        'I care about the size of the generative AI model (i.e., parameters).',
+        'I care whether the generative AI model runs locally on my machine or in the cloud.'
     ]
 };
 
